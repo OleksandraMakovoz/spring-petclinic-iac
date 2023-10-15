@@ -1,0 +1,15 @@
+# Ignore Terraform module directory and provider files
+**.terraform/*
+terraform-provider*
+
+# Igore terraform state files
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+.terraform.lock.hcl
+
+# Ignore terraform files
+terraform.tfstate.*.backup
+backend_config.tfvars
+*.tfvars
+tfplan
