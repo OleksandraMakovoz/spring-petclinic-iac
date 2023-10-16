@@ -63,6 +63,7 @@ resource "aws_ecs_service" "petclinic_service" {
       "sg-0de773a1c18ac7d23",
       "sg-038cf2b651317b2a4"
     ]
+    assign_public_ip = true
   }
   depends_on = [aws_ecs_cluster.petclinic_cluster]
 }
