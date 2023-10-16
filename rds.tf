@@ -5,7 +5,7 @@ resource "aws_db_instance" "petclinic" {
   engine_version       = "8.0.33"
   instance_class       = "db.t3.micro"
   db_name              = var.db_name
-  username             = "admin" #data.aws_ssm_parameter.master_db_username.value
+  username             = data.aws_ssm_parameter.master_db_username.value
   password             = data.aws_ssm_parameter.master_db_password.value
   parameter_group_name = "default.mysql8.0"
   identifier           = "rds-mysql-petclinic"

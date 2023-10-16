@@ -51,6 +51,7 @@ resource "aws_ecs_service" "petclinic_service" {
   name            = "petclinic-app"
   cluster         = aws_ecs_cluster.petclinic_cluster.id
   task_definition = aws_ecs_task_definition.petclinic_task.arn
+  desired_count   = 0
   launch_type     = "FARGATE"
   network_configuration {
     subnets = [
@@ -58,7 +59,10 @@ resource "aws_ecs_service" "petclinic_service" {
       "subnet-0bdb6ead8a7106218",
       "subnet-063a8125c38c3b725"
     ]
-    security_groups = ["sg-0de773a1c18ac7d23"]
+    security_groups = [
+      "sg-0de773a1c18ac7d23",
+      "sg-038cf2b651317b2a4"
+    ]
   }
   depends_on = [aws_ecs_cluster.petclinic_cluster]
 }
