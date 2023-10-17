@@ -1,5 +1,5 @@
 # Ignore Terraform module directory and provider files
-**.terraform/*
+.terraform/*
 terraform-provider*
 
 # Igore terraform state files
@@ -13,3 +13,5 @@ terraform.tfstate.*.backup
 backend_config.tfvars
 *.tfvars
 tfplan
+
+.DS_Store
