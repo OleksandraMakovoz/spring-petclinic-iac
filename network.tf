@@ -81,8 +81,3 @@ resource "aws_security_group" "web_server" {
   tags_all               = {}
   vpc_id                 = aws_vpc.main.id
 }
-
-import {
-  to = aws_subnet.public_subnet_1a
-  id = "subnet-0628371ea3288c888"
-}
